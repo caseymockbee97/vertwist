@@ -6,7 +6,12 @@
       "web"
     ]
   },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "babel-plugin-graphql-tag": "^3.3.0"
+  },
   "devDependencies": {
+    "@redwoodjs/cli-storybook": "6.2.0",
     "@redwoodjs/core": "6.2.0"
   },
   "eslintConfig": {
