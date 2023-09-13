@@ -1,9 +1,11 @@
+import { WHITE } from "src/design/Colors"
+
 interface Props {
   color: string
   borderColor?: string
 }
 
-const ColorSample = ({ color, borderColor = "#DDDED7" }: Props) => {
+const ColorTile = ({ color, borderColor = WHITE }: Props) => {
   return (
     <>
       <svg
@@ -24,4 +26,4 @@ const ColorSample = ({ color, borderColor = "#DDDED7" }: Props) => {
   )
 }
 
-export default ColorSample
+export default ColorTile

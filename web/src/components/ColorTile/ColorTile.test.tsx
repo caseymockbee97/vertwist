@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ColorSample from './ColorSample'
+import ColorTile from './ColorTile'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('ColorSample', () => {
+describe('ColorTile', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ColorSample color="#0048AB" />)
+      render(<ColorTile />)
     }).not.toThrow()
   })
 })
