@@ -22,4 +22,21 @@ export default meta
 
 type Story = StoryObj<typeof Typography>
 
-export const Primary: Story = {}
+export const h1: Story = {
+  args: {
+    children: 'Hello World!',
+    variant: 'h1'
+  }
+}
+export const h2: Story = {
+  args: {
+    children: 'Hello World!',
+    variant: 'h2'
+  }
+}
+export const p: Story = {
+  args: {
+    children: 'Hello World!',
+    variant: 'p'
+  }
+}
