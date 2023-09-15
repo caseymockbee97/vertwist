@@ -12,15 +12,15 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import LargeButton from './LargeButton'
+import SmallButton from './SmallButton'
 
-const meta: Meta<typeof LargeButton> = {
-  component: LargeButton,
+const meta: Meta<typeof SmallButton> = {
+  component: SmallButton,
 }
 
 export default meta
 
-type Story = StoryObj<typeof LargeButton>
+type Story = StoryObj<typeof SmallButton>
 
 export const Primary: Story = {
   args: {
@@ -32,7 +32,7 @@ export const PrimaryDisabled: Story = {
   args: {
     children: 'Howdy',
     variant: 'primary',
-    disabled: true
+    disabled: true,
   },
 }
 export const Secondary: Story = {
@@ -45,6 +45,6 @@ export const SecondaryDisabled: Story = {
   args: {
     children: 'Howdy',
     variant: 'secondary',
-    disabled: true
+    disabled: true,
   },
 }

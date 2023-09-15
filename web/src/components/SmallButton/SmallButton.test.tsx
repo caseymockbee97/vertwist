@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import LargeButton from './LargeButton'
+import SmallButton from './SmallButton'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('LargeButton', () => {
+describe('SmallButton', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<LargeButton children={'button'} variant='primary' />)
+      render(<SmallButton children={"howdy"} />)
     }).not.toThrow()
   })
 })

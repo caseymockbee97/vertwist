@@ -4,12 +4,12 @@ import {
   TANGAROA_500,
   WHITE,
 } from 'src/design/Colors'
-import { StyledH1 } from 'src/design/Typography'
+import { StyledH3 } from 'src/design/Typography'
 import styled from 'styled-components'
 
 type ButtonVariant = 'primary' | 'secondary'
 
-interface LargeButtonProps
+interface SmallButtonProps
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
@@ -20,13 +20,13 @@ interface LargeButtonProps
   disabled?: boolean
 }
 
-const LargeButton = ({
+const SmallButton = ({
   onClick,
   children,
   variant = 'primary',
   disabled = false,
   ...htmlAttributes
-}: LargeButtonProps) => {
+}: SmallButtonProps) => {
   switch (variant) {
     case 'primary':
       return (
@@ -35,7 +35,7 @@ const LargeButton = ({
           disabled={disabled}
           {...htmlAttributes}
         >
-          <StyledH1>{children}</StyledH1>
+          <StyledH3>{children}</StyledH3>
         </PrimaryButton>
       )
     case 'secondary':
@@ -45,19 +45,19 @@ const LargeButton = ({
           disabled={disabled}
           {...htmlAttributes}
         >
-          <StyledH1>{children}</StyledH1>
+          <StyledH3>{children}</StyledH3>
         </SecondaryButton>
       )
   }
 }
 
-const BaseButton = styled.button`
+const BaseButton = styled.button<{}>`
   padding: 6px 12px;
   border-radius: 10px;
-  & h1 {
+  & h3 {
     color: ${TANGAROA_500};
   }
-  &:disabled h1 {
+  &:disabled h3 {
     color: ${TANGAROA_100};
   }
 `
@@ -69,4 +69,4 @@ const SecondaryButton = styled(BaseButton)`
   background-color: ${WHITE};
 `
 
-export default LargeButton
+export default SmallButton
