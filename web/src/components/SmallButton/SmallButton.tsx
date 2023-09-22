@@ -54,6 +54,7 @@ const SmallButton = ({
 const BaseButton = styled.button<{}>`
   padding: 6px 12px;
   border-radius: 10px;
+  cursor: pointer;
   & h3 {
     color: ${TANGAROA_500};
   }

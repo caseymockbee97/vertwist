@@ -6,13 +6,23 @@ type MainLayoutProps = {
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
-  return <Container>{children}</Container>
+  return <Screen>
+    <App>
+    {children}
+    </App>
+    </Screen>
 }
 
-const Container = styled.div`
+const Screen = styled.div`
   background-color: ${TANGAROA_500};
-  height: 100vh;
-  width: 100vw;
-  overflow: auto;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
+const App = styled.div`
+  width: 300px;
+`
+
 export default MainLayout
