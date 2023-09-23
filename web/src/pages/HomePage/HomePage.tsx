@@ -4,7 +4,13 @@ import ColorTiles from 'src/components/ColorTiles'
 import DefaultInput from 'src/components/DefaultInput/DefaultInput'
 import LargeButton from 'src/components/LargeButton/LargeButton'
 import SmallButton from 'src/components/SmallButton/SmallButton'
-import { HOLD_BLUE, HOLD_PINK, HOLD_PURPLE, HOLD_WHITE } from 'src/design/Colors'
+import Title from 'src/components/Title/Title'
+import {
+  HOLD_BLUE,
+  HOLD_PINK,
+  HOLD_PURPLE,
+  HOLD_WHITE,
+} from 'src/design/Colors'
 import { StyledH1, StyledH2 } from 'src/design/Typography'
 import styled from 'styled-components'
 
@@ -14,7 +20,7 @@ const HomePage = () => {
       <MetaTags title="Home" description="Home page" />
 
       <Container>
-        <StyledH1>Vertical Scramble</StyledH1>
+        <Title />
         <ColorTiles colors={[HOLD_BLUE, HOLD_PINK, HOLD_PURPLE, HOLD_WHITE]} />
         <InputContainer>
           <label htmlFor="colorInput">

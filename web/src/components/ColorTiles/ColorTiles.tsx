@@ -1,21 +1,28 @@
-import { HOLD_CLEAR, WHITE } from "src/design/Colors";
+import { HOLD_CLEAR, WHITE } from 'src/design/Colors'
 
 interface Props {
-  colors: string[];
-  borderColor?: string;
-  defaultColor?: string;
+  colors: string[]
+  borderColor?: string
+  defaultColor?: string
 }
 
-const ColorTiles = ({colors, borderColor = WHITE, defaultColor = HOLD_CLEAR}: Props) => {
+const ColorTiles = ({
+  colors,
+  borderColor = WHITE,
+  defaultColor = HOLD_CLEAR,
+}: Props) => {
   return (
     <>
       <svg
+        role="img"
+        aria-labelledby="color-tiles"
         width="276"
         height="90"
         viewBox="0 0 276 90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title id="color-tiles">Color Tiles</title>
         <path
           d="M23.5 3.30141C24.7376 2.58687 26.2624 2.58687 27.5 3.30141L44.1506 12.9147C45.3882 13.6292 46.1506 14.9497 46.1506 16.3788V35.6053C46.1506 37.0343 45.3882 38.3548 44.1506 39.0694L27.5 48.6826C26.2624 49.3971 24.7376 49.3971 23.5 48.6826L6.84937 39.0694C5.61176 38.3548 4.84937 37.0343 4.84937 35.6053V16.3788C4.84937 14.9497 5.61176 13.6292 6.84936 12.9147L23.5 3.30141Z"
           fill={colors[0] || defaultColor}
