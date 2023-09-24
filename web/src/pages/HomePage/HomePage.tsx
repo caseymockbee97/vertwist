@@ -1,4 +1,4 @@
-import { Link, routes } from '@redwoodjs/router'
+import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import ColorTiles from 'src/components/ColorTiles'
 import DefaultInput from 'src/components/DefaultInput/DefaultInput'
@@ -37,7 +37,7 @@ const HomePage = () => {
         </InputContainer>
         <LargeButton
           onClick={() => {
-            console.log('howdy')
+            navigate(routes.game())
           }}
           variant="primary"
         >
