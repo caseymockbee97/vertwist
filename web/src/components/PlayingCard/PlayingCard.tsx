@@ -5,8 +5,8 @@ import CardFront from 'src/Assets/Images/CardFront.png'
 const PlayingCard = () => {
   return (
     <Card>
-      <div className="card-side front"></div>
-      <div className="card-side back"></div>
+      <img src={CardBack} className="card-side front"></img>
+      <img src={CardFront} className="card-side back"></img>
     </Card>
   )
 }
@@ -14,35 +14,25 @@ const PlayingCard = () => {
 const Card = styled.div`
   perspective: 150rem;
   position: relative;
-  height: 300px;
-  width: 200px;
-
-  box-shadow: none;
-  background: none;
+  width: 240px;
+  /* Calculated Height */
+  height: 384px;
 
   .card-side {
-    height: 300px;
     border-radius: 15px;
     transition: all 0.8s ease;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
-    padding: 2rem;
+    width: 240px;
   }
 
   .card-side.back {
     transform: rotateY(-180deg);
-    background-image: url(${CardFront});
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .card-side.front {
-    background-image: url(${CardBack});
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   &:hover .card-side.front {

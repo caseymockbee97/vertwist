@@ -1,16 +1,16 @@
-import { TANGAROA_500 } from "src/design/Colors"
-import styled from "styled-components"
+import { TANGAROA_500 } from 'src/design/Colors'
+import styled from 'styled-components'
 
 type MainLayoutProps = {
   children?: React.ReactNode
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
-  return <Screen>
-    <App>
-    {children}
-    </App>
+  return (
+    <Screen>
+      <App>{children}</App>
     </Screen>
+  )
 }
 
 const Screen = styled.div`
