@@ -24,7 +24,7 @@ import styled from 'styled-components'
 const HomePage = () => {
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
+      <MetaTags title="Home" description="Vertical Scramble. The card game for climbers." />
 
       <Container $gap="36px">
         <Title />
