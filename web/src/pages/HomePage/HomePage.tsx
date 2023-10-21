@@ -1,4 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
+import PlayingCard from 'src/components/PlayingCard/PlayingCard'
 import Title from 'src/components/Title/Title'
 import { WHITE } from 'src/design/Colors'
 import { StyledH2, StyledH3 } from 'src/design/Typography'
@@ -18,6 +19,7 @@ const HomePage = () => {
           <StyledH2>The card game for climbers.</StyledH2>
           <StyledH3 color={WHITE}>Coming soon...</StyledH3>
         </Container>
+        <PlayingCard />
       </Container>
     </>
   )
