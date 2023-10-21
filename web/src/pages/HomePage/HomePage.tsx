@@ -6,12 +6,19 @@ import LargeButton from 'src/components/LargeButton/LargeButton'
 import SmallButton from 'src/components/SmallButton/SmallButton'
 import Title from 'src/components/Title/Title'
 import {
+  HOLD_BLACK,
   HOLD_BLUE,
+  HOLD_GREEN,
+  HOLD_ORANGE,
   HOLD_PINK,
   HOLD_PURPLE,
+  HOLD_RED,
   HOLD_WHITE,
+  HOLD_WILDCARD,
+  HOLD_YELLOW,
+  WHITE,
 } from 'src/design/Colors'
-import { StyledH1, StyledH2 } from 'src/design/Typography'
+import { StyledH1, StyledH2, StyledH3, StyledP } from 'src/design/Typography'
 import styled from 'styled-components'
 
 const HomePage = () => {
@@ -19,51 +26,22 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <Container>
+      <Container $gap="36px">
         <Title />
-        <ColorTiles colors={[HOLD_BLUE, HOLD_PINK, HOLD_PURPLE, HOLD_WHITE]} />
-        <InputContainer>
-          <label htmlFor="colorInput">
-            <StyledH2>Add a Color</StyledH2>
-          </label>
-          <InputRow>
-            <DefaultInput
-              id="colorInput"
-              width="100%"
-              placeholder="Type a Color"
-            />
-            <SmallButton variant="primary">Add</SmallButton>
-          </InputRow>
-        </InputContainer>
-        <LargeButton
-          onClick={() => {
-            navigate(routes.game())
-          }}
-          variant="primary"
-        >
-          Start Game
-        </LargeButton>
+        <Container $gap="12px">
+          <StyledH2>The card game for climbers.</StyledH2>
+          <StyledH3 color={WHITE}>Coming soon...</StyledH3>
+        </Container>
       </Container>
     </>
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ $gap: string }>`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 72px;
-  width: 100%;
-`
-const InputRow = styled.div`
-  display: flex;
-  gap: 26px;
-`
-
-const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: ${({ $gap }) => $gap};
   width: 100%;
 `
 
