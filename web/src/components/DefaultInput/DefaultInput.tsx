@@ -1,7 +1,8 @@
+import { TextField } from '@redwoodjs/forms'
 import { TANGAROA_100, TANGAROA_500 } from 'src/design/Colors'
 import styled from 'styled-components'
 
-const DefaultInput = styled.input<{ width?: string }>`
+const DefaultInput = styled(TextField)<{ width?: string }>`
   padding: 6px 12px;
   border-radius: 5px;
   width: ${({ width }) => (width ? width : 'auto')};
