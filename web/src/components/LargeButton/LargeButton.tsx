@@ -1,8 +1,10 @@
 import {
+  ORANGE_400,
   ORANGE_500,
+  PURPLE_400,
+  PURPLE_500,
   TANGAROA_100,
   TANGAROA_500,
-  WHITE,
 } from 'src/design/Colors'
 import { StyledH1 } from 'src/design/Typography'
 import styled from 'styled-components'
@@ -52,6 +54,7 @@ const LargeButton = ({
 }
 
 const BaseButton = styled.button`
+  cursor: pointer;
   padding: 6px 12px;
   border-radius: 10px;
   & h1 {
@@ -64,9 +67,15 @@ const BaseButton = styled.button`
 
 const PrimaryButton = styled(BaseButton)`
   background-color: ${ORANGE_500};
+  &:hover {
+    background-color: ${ORANGE_400};
+  }
 `
 const SecondaryButton = styled(BaseButton)`
-  background-color: ${WHITE};
+  background-color: ${PURPLE_500};
+  &:hover {
+    background-color: ${PURPLE_400};
+  }
 `
 
 export default LargeButton
