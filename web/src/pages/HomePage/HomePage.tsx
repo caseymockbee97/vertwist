@@ -1,5 +1,6 @@
-import { Link, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import { useCallback } from 'react'
 import LargeButton from 'src/components/LargeButton/LargeButton'
 import PlayingCard from 'src/components/PlayingCard/PlayingCard'
 import Title from 'src/components/Title/Title'
@@ -8,6 +9,10 @@ import { StyledH2, StyledH3 } from 'src/design/Typography'
 import styled from 'styled-components'
 
 const HomePage = () => {
+  const handleNavigation = useCallback(() => {
+    navigate(routes.newsletterSignUp())
+  }, [navigate])
+
   return (
     <>
       <MetaTags
@@ -20,10 +25,12 @@ const HomePage = () => {
         <PlayingCard />
         <Container $gap="18px">
           <StyledH2>The card game for climbers.</StyledH2>
-          <StyledH3 color={WHITE}>Coming soon…</StyledH3>
+          <StyledH3 color={WHITE}>
+            Vertical Scramble is card game that utilizes the spray wall in your
+            climbing gym.
+          </StyledH3>
         </Container>
-        <LargeButton>Send Me Updates</LargeButton>
-        <Link to={routes.newsletterSignUp()}>NewsletterSignUp</Link>
+        <LargeButton onClick={handleNavigation}>Send Me Updates</LargeButton>
       </Container>
     </>
   )
