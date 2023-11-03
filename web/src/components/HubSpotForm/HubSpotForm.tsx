@@ -1,41 +1,26 @@
-import {
-  EmailField,
-  FieldError,
-  Form,
-  Label,
-  Submit,
-  TextField,
-} from '@redwoodjs/forms'
-import { useEffect } from 'react'
+import { FieldError, Form, Label } from '@redwoodjs/forms'
+import { useState } from 'react'
 import styled from 'styled-components'
 import LargeButton from '../LargeButton/LargeButton'
-import DefaultInput from '../DefaultInput/DefaultInput'
-import { StyledH2, StyledH3, StyledP } from 'src/design/Typography'
-import { PURPLE_100, PURPLE_200, PURPLE_500, WHITE } from 'src/design/Colors'
+import DefaultInput, { EmailInput } from '../DefaultInput/DefaultInput'
+import { StyledH2, StyledP } from 'src/design/Typography'
+import { WHITE } from 'src/design/Colors'
+import { navigate, routes } from '@redwoodjs/router'
 
 export const HubSpotForm = () => {
-  // useEffect(() => {
-  //   const script = document.createElement('script')
-  //   script.src = 'https://js.hsforms.net/forms/v2.js'
-  //   document.body.appendChild(script)
+  const [loading, setLoading] = useState(false)
+  const [disabled, setDisabled] = useState(false)
 
-  //   script.addEventListener('load', () => {
-  //     // @TS-ignore
-  //     if ((window as any).hbspt) {
-  //       // @TS-ignore
-  //       ;(window as any).hbspt.forms.create({
-  //         region: 'na1',
-  //         portalId: '44207835',
-  //         formId: '81b89e89-930a-48bc-9c2b-ed548897ee91',
-  //       })
-  //     }
-  //   })
-  // }, [])
   const onSubmit = (data: {
     email: string
     firstName?: string
     lastName?: string
-  }) => {}
+  }) => {
+    setDisabled(true)
+    setTimeout(() => {
+      navigate(routes.home())
+    }, 2000)
+  }
 
   return (
     <StyledForm onSubmit={onSubmit}>
@@ -44,7 +29,7 @@ export const HubSpotForm = () => {
           <StyledH2>Email</StyledH2>
           <StyledP>*Required</StyledP>
         </StyledLabel>
-        <DefaultInput validation={{ required: true }} name="email" />
+        <EmailInput validation={{ required: true }} name="email" />
         <StyledP color={WHITE}>
           <FieldError name="email" />
         </StyledP>
@@ -67,7 +52,9 @@ export const HubSpotForm = () => {
           <FieldError name="lastName" />
         </StyledP>
       </InputWrapper>
-      <StyledButton type="submit">Subscribe</StyledButton>
+      <StyledButton disabled={disabled || loading} type="submit">
+        Subscribe
+      </StyledButton>
     </StyledForm>
   )
 }
@@ -94,3 +81,21 @@ const StyledButton = styled(LargeButton)`
 `
 
 export default HubSpotForm
+
+// useEffect(() => {
+//   const script = document.createElement('script')
+//   script.src = 'https://js.hsforms.net/forms/v2.js'
+//   document.body.appendChild(script)
+
+//   script.addEventListener('load', () => {
+//     // @TS-ignore
+//     if ((window as any).hbspt) {
+//       // @TS-ignore
+//       ;(window as any).hbspt.forms.create({
+//         region: 'na1',
+//         portalId: '44207835',
+//         formId: '81b89e89-930a-48bc-9c2b-ed548897ee91',
+//       })
+//     }
+//   })
+// }, [])
