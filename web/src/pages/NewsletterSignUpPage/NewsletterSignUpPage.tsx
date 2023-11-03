@@ -12,7 +12,8 @@ const NewsletterSignUpPage = () => {
       <Container>
         <StyledH1>Update Me!</StyledH1>
         <StyledH3 color={WHITE}>
-          Send us your email and we'll send you updates about Vertical Scramble!
+          Sign up for our mailing list if you'd like to be updated about
+          Vertical Scramble!
         </StyledH3>
         <HubSpotForm />
       </Container>
