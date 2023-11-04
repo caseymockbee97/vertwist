@@ -25,10 +25,7 @@ const HomePage = () => {
         <PlayingCard />
         <Container $gap="18px">
           <StyledH2>The card game for climbers.</StyledH2>
-          <StyledH3 color={WHITE}>
-            Vertical Scramble is card game that utilizes the spray wall in your
-            climbing gym.
-          </StyledH3>
+          <IndentedH3 color={WHITE}>{PARAGRAPH_TEXT}</IndentedH3>
         </Container>
         <LargeButton onClick={handleNavigation}>Send Me Updates</LargeButton>
       </Container>
@@ -47,4 +44,11 @@ const Container = styled.div<{ $gap: string }>`
   }
 `
 
+const IndentedH3 = styled(StyledH3)`
+  text-indent: 2ch;
+`
+
 export default HomePage
+
+const PARAGRAPH_TEXT =
+  'Vertical Scramble is a 2+ player card game. It uses the spray wall in your climbing gym as the game board. Challenge your gym friends (...or enemies) to see who has the better endurance!'
