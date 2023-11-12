@@ -43,10 +43,6 @@ const handleSubmit = async (data: FormData) => {
             value: 'Jeff',
           },
         ],
-        context: {
-          pageUri: 'www.verticalscramble.com/newsletter',
-          pageName: 'Newsletter',
-        },
         legalConsentOptions: {
           consent: {
             // Include this object when GDPR options are enabled
