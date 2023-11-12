@@ -22,12 +22,12 @@ const HomePage = () => {
 
       <Container $gap="36px">
         <Title />
+        <IndentedH3 color={WHITE}>{PARAGRAPH_TEXT}</IndentedH3>
         <PlayingCard />
         <Container $gap="18px">
           <StyledH2>The card game for climbers.</StyledH2>
-          <IndentedH3 color={WHITE}>{PARAGRAPH_TEXT}</IndentedH3>
         </Container>
-        <LargeButton onClick={handleNavigation}>Send Me Updates</LargeButton>
+        <LargeButton onClick={handleNavigation}>Newsletter Sign Up</LargeButton>
       </Container>
     </>
   )
@@ -46,6 +46,7 @@ const Container = styled.div<{ $gap: string }>`
 
 const IndentedH3 = styled(StyledH3)`
   text-indent: 2ch;
+  text-align: justify;
 `
 
 export default HomePage

@@ -12,7 +12,7 @@ const NewsletterSignUpPage = () => {
         description="Sign up to get updates from Vertical Scramble."
       />
       <Container>
-        <StyledH1>Update Me!</StyledH1>
+        <StyledH1>Sign Me Up!</StyledH1>
         <HubSpotForm />
       </Container>
     </>
