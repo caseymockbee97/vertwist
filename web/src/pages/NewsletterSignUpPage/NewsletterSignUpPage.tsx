@@ -1,20 +1,18 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import HubSpotForm from 'src/components/HubSpotForm/HubSpotForm'
-import { WHITE } from 'src/design/Colors'
-import { StyledH1, StyledH3, StyledP } from 'src/design/Typography'
+import { StyledH1 } from 'src/design/Typography'
 import styled from 'styled-components'
 
 const NewsletterSignUpPage = () => {
   return (
     <>
-      <MetaTags title="Newsletter" description="Sign up to get updates" />
+      <MetaTags
+        title="Newsletter"
+        description="Sign up to get updates from Vertical Scramble."
+      />
       <Container>
         <StyledH1>Update Me!</StyledH1>
-        <StyledH3 color={WHITE}>
-          Sign up for our mailing list if you'd like to be updated about
-          Vertical Scramble!
-        </StyledH3>
         <HubSpotForm />
       </Container>
     </>
