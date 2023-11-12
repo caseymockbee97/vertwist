@@ -69,15 +69,14 @@ export const HubSpotForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setDisabled(true)
-    const res = await handleSubmit(data)
-    if (res.ok) {
-      setSubmitted(true)
-    } else {
-      const errorRes = await res.json()
-      console.log(errorRes)
-      setFormSubmitError('')
-    }
-
+    // const res = await handleSubmit(data)
+    // if (res.ok) {
+    //   setSubmitted(true)
+    // } else {
+    //   const errorRes = await res.json()
+    //   console.log(errorRes)
+    //   setFormSubmitError('')
+    // }
     setSubmitted(true)
 
     setTimeout(() => {
@@ -205,21 +204,3 @@ const CheckboxWrapper = styled.div`
 `
 
 export default HubSpotForm
-
-// useEffect(() => {
-//   const script = document.createElement('script')
-//   script.src = 'https://js.hsforms.net/forms/v2.js'
-//   document.body.appendChild(script)
-
-//   script.addEventListener('load', () => {
-//     // @TS-ignore
-//     if ((window as any).hbspt) {
-//       // @TS-ignore
-//       ;(window as any).hbspt.forms.create({
-//         region: 'na1',
-//         portalId: '44207835',
-//         formId: '81b89e89-930a-48bc-9c2b-ed548897ee91',
-//       })
-//     }
-//   })
-// }, [])
