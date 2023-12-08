@@ -3,12 +3,10 @@
   "files.trimTrailingWhitespace": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    // "source.fixAll.eslint": "explicit"
   },
   "[prisma]": {
     "editor.formatOnSave": true
   },
-  "cSpell.words": [
-    "hbspt"
-  ]
+  "cSpell.words": ["hbspt"]
 }

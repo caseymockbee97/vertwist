@@ -3,7 +3,7 @@ import { ORANGE_500, WHITE } from 'src/design/Colors'
 const Title = () => {
   return (
     <svg
-    aria-labelledby="title-svg"
+      aria-labelledby="title-svg"
       width="228"
       height="96"
       viewBox="0 0 228 96"
