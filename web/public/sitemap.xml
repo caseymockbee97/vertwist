@@ -8,6 +8,10 @@
 <loc>http://www.verticalscramble.com/rules</loc>
 <priority>0.8</priority>
 </url>
+<url>
+<loc>http://www.verticalscramble.com/gameplay</loc>
+<priority>0.8</priority>
+</url>
 <loc>http://www.verticalscramble.com/newsletter</loc>
 <priority>0.8</priority>
 </url>
