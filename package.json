@@ -11,8 +11,8 @@
     "babel-plugin-graphql-tag": "^3.3.0"
   },
   "devDependencies": {
-    "@redwoodjs/cli-storybook": "6.2.0",
-    "@redwoodjs/core": "6.2.0"
+    "@redwoodjs/cli-storybook": "6.5.0",
+    "@redwoodjs/core": "6.5.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
