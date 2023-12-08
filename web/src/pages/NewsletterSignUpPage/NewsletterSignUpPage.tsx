@@ -1,8 +1,9 @@
-import { Link, routes } from '@redwoodjs/router'
+import styled from 'styled-components'
+
 import { MetaTags } from '@redwoodjs/web'
+
 import HubSpotForm from 'src/components/HubSpotForm/HubSpotForm'
 import { StyledH1 } from 'src/design/Typography'
-import styled from 'styled-components'
 
 const NewsletterSignUpPage = () => {
   return (

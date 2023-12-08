@@ -1,12 +1,21 @@
 import styled from 'styled-components'
+
 import CardBack from 'src/Assets/Images/CardBack.png'
 import CardFront from 'src/Assets/Images/CardFront.png'
 
 const PlayingCard = () => {
   return (
     <Card>
-      <img src={CardBack} className="card-side front"></img>
-      <img src={CardFront} className="card-side back"></img>
+      <img
+        src={CardBack}
+        alt="Card back of playing card"
+        className="card-side front"
+      />
+      <img
+        src={CardFront}
+        alt="Card front of wild card"
+        className="card-side back"
+      />
     </Card>
   )
 }

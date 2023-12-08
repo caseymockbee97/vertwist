@@ -1,82 +1,26 @@
-import { CheckboxField, FieldError, Form, Label } from '@redwoodjs/forms'
 import { useState } from 'react'
+
 import styled from 'styled-components'
-import LargeButton from '../LargeButton/LargeButton'
-import DefaultInput, { EmailInput } from '../DefaultInput/DefaultInput'
-import { StyledH2, StyledH3, StyledP } from 'src/design/Typography'
-import { WHITE } from 'src/design/Colors'
+
+import { CheckboxField, FieldError, Form, Label } from '@redwoodjs/forms'
 import { navigate, routes } from '@redwoodjs/router'
 
-const FORM_ID = '81b89e89-930a-48bc-9c2b-ed548897ee91'
-const PORTAL_ID = '44207835'
+import { WHITE } from 'src/design/Colors'
+import { StyledH2, StyledH3, StyledP } from 'src/design/Typography'
 
-interface FormData {
-  email: string
-  firstName?: string
-  lastName?: string
-  agreedToTOS: string
-}
+import DefaultInput, { EmailInput } from '../DefaultInput/DefaultInput'
+import LargeButton from '../LargeButton/LargeButton'
 
-const handleSubmit = async (data: FormData) => {
-  return await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/secure/submit/${PORTAL_ID}/${FORM_ID}`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        fields: [
-          {
-            objectTypeId: '0-1',
-            name: 'email',
-            value: data.email,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'firstname',
-            value: data.firstName,
-          },
-          {
-            objectTypeId: '0-1',
-            name: data.lastName,
-            value: 'Jeff',
-          },
-        ],
-        legalConsentOptions: {
-          consent: {
-            // Include this object when GDPR options are enabled
-            consentToProcess: true,
-            text: 'I agree to receive promotional messages from Vertical Scramble.',
-            communications: [
-              {
-                value: true,
-                subscriptionTypeId: 999,
-                text: 'I agree to receive marketing communications from Example Company.',
-              },
-            ],
-          },
-        },
-      }),
-    }
-  )
-}
+// TODO: update to use our own DB
 
 export const HubSpotForm = () => {
   const [disabled, setDisabled] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-  const [formSubmitError, setFormSubmitError] = useState('')
+  const [formSubmitError] = useState('')
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async () => {
     setDisabled(true)
-    // const res = await handleSubmit(data)
-    // if (res.ok) {
-    //   setSubmitted(true)
-    // } else {
-    //   const errorRes = await res.json()
-    //   console.log(errorRes)
-    //   setFormSubmitError('')
-    // }
+
     setSubmitted(true)
 
     setTimeout(() => {
@@ -87,8 +31,8 @@ export const HubSpotForm = () => {
   return submitted ? (
     <>
       <StyledH3 color={WHITE}>
-        Thank you for signing up to our newsletter! You'll be hearing from us
-        soon!
+        Thank you for signing up to our newsletter! You&apos;ll be hearing from
+        us soon!
       </StyledH3>
     </>
   ) : (
