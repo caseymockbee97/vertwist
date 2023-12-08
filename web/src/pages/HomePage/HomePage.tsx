@@ -1,17 +1,20 @@
-import { Link, navigate, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
 import { useCallback } from 'react'
+
+import styled from 'styled-components'
+
+import { navigate, routes } from '@redwoodjs/router'
+import { MetaTags } from '@redwoodjs/web'
+
 import LargeButton from 'src/components/LargeButton/LargeButton'
 import PlayingCard from 'src/components/PlayingCard/PlayingCard'
 import Title from 'src/components/Title/Title'
 import { WHITE } from 'src/design/Colors'
 import { StyledH2, StyledH3 } from 'src/design/Typography'
-import styled from 'styled-components'
 
 const HomePage = () => {
   const handleNavigation = useCallback(() => {
     navigate(routes.newsletterSignUp())
-  }, [navigate])
+  }, [])
 
   return (
     <>
@@ -22,7 +25,12 @@ const HomePage = () => {
 
       <Container $gap="36px">
         <Title />
-        <IndentedH3 color={WHITE}>{PARAGRAPH_TEXT}</IndentedH3>
+        <CenteredH3 color={WHITE}>
+          Vertical Scramble is the card game for climbers. The game board is the
+          spray wall at your climbing gym. The cards describe your next move.
+          Challenge your friends to see who has better endurance on the wall –
+          last one left climbing wins!
+        </CenteredH3>
         <PlayingCard />
         <Container $gap="18px">
           <StyledH2>The card game for climbers.</StyledH2>
@@ -44,12 +52,8 @@ const Container = styled.div<{ $gap: string }>`
   }
 `
 
-const IndentedH3 = styled(StyledH3)`
-  text-indent: 2ch;
-  text-align: justify;
+const CenteredH3 = styled(StyledH3)`
+  text-align: center;
 `
 
 export default HomePage
-
-const PARAGRAPH_TEXT =
-  'Vertical Scramble is a 2+ player card game. It uses the spray wall in your climbing gym as the game board. Challenge your gym friends (...or enemies) to see who has the better endurance!'
