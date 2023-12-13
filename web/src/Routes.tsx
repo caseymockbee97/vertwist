@@ -14,7 +14,7 @@ import MainLayout from 'src/layouts/MainLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={MainLayout} prerender>
+      <Set wrap={MainLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/gameplay" page={GameplayPage} name="gameplay" />
         <Route path="/newsletter" page={NewsletterSignUpPage} name="newsletterSignUp" />
