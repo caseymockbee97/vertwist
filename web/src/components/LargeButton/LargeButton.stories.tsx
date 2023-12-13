@@ -32,7 +32,7 @@ export const PrimaryDisabled: Story = {
   args: {
     children: 'Howdy',
     variant: 'primary',
-    disabled: true
+    disabled: true,
   },
 }
 export const Secondary: Story = {
@@ -45,6 +45,6 @@ export const SecondaryDisabled: Story = {
   args: {
     children: 'Howdy',
     variant: 'secondary',
-    disabled: true
+    disabled: true,
   },
 }

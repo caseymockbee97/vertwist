@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import CardBack from 'src/Assets/Images/CardBack.png'
 import CardFront from 'src/Assets/Images/CardFront.png'

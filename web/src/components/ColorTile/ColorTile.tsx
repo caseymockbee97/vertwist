@@ -1,4 +1,4 @@
-import { WHITE } from "src/design/Colors"
+import { WHITE } from 'src/design/Colors'
 
 interface Props {
   color: string

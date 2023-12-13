@@ -12,8 +12,14 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
+import {
+  HOLD_BLACK,
+  HOLD_BLUE,
+  HOLD_GREEN,
+  HOLD_WHITE,
+} from 'src/design/Colors'
+
 import ColorTiles from './ColorTiles'
-import { HOLD_BLACK, HOLD_BLUE, HOLD_GREEN, HOLD_WHITE } from 'src/design/Colors'
 
 const meta: Meta<typeof ColorTiles> = {
   component: ColorTiles,
@@ -25,8 +31,6 @@ type Story = StoryObj<typeof ColorTiles>
 
 export const Primary: Story = {
   args: {
-    colors: [
-      HOLD_BLACK, HOLD_BLUE, HOLD_GREEN, HOLD_WHITE
-    ]
-  }
+    colors: [HOLD_BLACK, HOLD_BLUE, HOLD_GREEN, HOLD_WHITE],
+  },
 }

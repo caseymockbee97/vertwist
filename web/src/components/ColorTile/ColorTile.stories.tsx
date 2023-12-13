@@ -12,8 +12,9 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import ColorTile from './ColorTile'
 import { HOLD_BLUE } from 'src/design/Colors'
+
+import ColorTile from './ColorTile'
 
 const meta: Meta<typeof ColorTile> = {
   component: ColorTile,
@@ -26,5 +27,5 @@ type Story = StoryObj<typeof ColorTile>
 export const Primary: Story = {
   args: {
     color: HOLD_BLUE,
-  }
+  },
 }

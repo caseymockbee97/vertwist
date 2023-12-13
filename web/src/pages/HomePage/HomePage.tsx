@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'

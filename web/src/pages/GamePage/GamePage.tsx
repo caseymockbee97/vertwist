@@ -7,9 +7,7 @@ const GamePage = () => {
       <MetaTags title="Game" description="Game page" />
 
       <h1>Howdy 🤠</h1>
-      <p>
-        We have a second page!!
-      </p>
+      <p>We have a second page!!</p>
       <p>
         <Link to={routes.home()}>Home</Link>`
       </p>

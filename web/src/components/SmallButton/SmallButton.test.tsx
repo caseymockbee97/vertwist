@@ -8,7 +8,7 @@ import SmallButton from './SmallButton'
 describe('SmallButton', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<SmallButton children={"howdy"} />)
+      render(<SmallButton children={'howdy'} />)
     }).not.toThrow()
   })
 })

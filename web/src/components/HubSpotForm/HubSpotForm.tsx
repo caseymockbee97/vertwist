@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { CheckboxField, FieldError, Form, Label } from '@redwoodjs/forms'
 import { navigate, routes } from '@redwoodjs/router'

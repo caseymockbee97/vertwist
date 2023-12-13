@@ -8,7 +8,7 @@ import LargeButton from './LargeButton'
 describe('LargeButton', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<LargeButton children={'button'} variant='primary' />)
+      render(<LargeButton children={'button'} variant="primary" />)
     }).not.toThrow()
   })
 })

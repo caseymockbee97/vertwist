@@ -1,3 +1,5 @@
+import styled from '@emotion/styled'
+
 import {
   ORANGE_400,
   ORANGE_500,
@@ -7,7 +9,6 @@ import {
   TANGAROA_500,
 } from 'src/design/Colors'
 import { StyledH1 } from 'src/design/Typography'
-import styled from 'styled-components'
 
 type ButtonVariant = 'primary' | 'secondary'
 

@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { ORANGE_500 } from "../Colors"
+import styled from '@emotion/styled'
+
+import { ORANGE_500 } from '../Colors'
 
 export const StyledH1 = styled.h1<{ color?: string }>`
   color: ${({ color }) => (color ? color : ORANGE_500)};
