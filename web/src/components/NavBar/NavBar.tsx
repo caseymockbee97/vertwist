@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 import { Link, routes } from '@redwoodjs/router'
 
-import { TANGAROA_500, ORANGE_300 } from 'src/design/Colors'
+import { TANGAROA_500, ORANGE_300, TANGAROA_400 } from 'src/design/Colors'
 import { StyledH2 } from 'src/design/Typography'
 
 const NavBar = () => {
@@ -11,13 +11,11 @@ const NavBar = () => {
       <UnstyledLink to={routes.home()}>
         <StyledH2 hoverColor={ORANGE_300}>Home</StyledH2>
       </UnstyledLink>
-      <StyledH2>|</StyledH2>
-      <UnstyledLink to={routes.rules()}>
-        <StyledH2 hoverColor={ORANGE_300}>Rules</StyledH2>
-      </UnstyledLink>
-      <StyledH2>|</StyledH2>
       <UnstyledLink to={routes.gameplay()}>
         <StyledH2 hoverColor={ORANGE_300}>Gameplay</StyledH2>
+      </UnstyledLink>
+      <UnstyledLink to={routes.faq()}>
+        <StyledH2 hoverColor={ORANGE_300}>FAQ</StyledH2>
       </UnstyledLink>
     </Container>
   )
@@ -34,6 +32,7 @@ const Container = styled.div`
   justify-content: center;
   position: absolute;
   top: 0;
+  box-shadow: 0px 1px 3px ${TANGAROA_400};
 `
 const UnstyledLink = styled(Link)`
   text-decoration: none;
