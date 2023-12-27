@@ -27,8 +27,10 @@ const Screen = styled.div`
   overflow: hidden;
 `
 const App = styled.div`
-  padding: 60px 0px;
-  width: 300px;
+  padding: 36px calc((100vw - 300px) / 2);
+  height: calc(100vh - 48px);
+  /* This is the calculated height of the navbar */
+  margin-top: 48px;
   overflow: auto;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
