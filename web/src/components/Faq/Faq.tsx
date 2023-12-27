@@ -1,18 +1,17 @@
 import styled from '@emotion/styled'
 
-import { WHITE } from 'src/design/Colors'
-import { StyledH2, StyledH3 } from 'src/design/Typography'
+import { StyledH2 } from 'src/design/Typography'
 
 interface Props {
   question: string
-  answer: string
+  answer: JSX.Element
 }
 
 const Faq = ({ question, answer }: Props) => {
   return (
     <Container>
       <StyledH2>{question}</StyledH2>
-      <StyledH3 color={WHITE}>{answer}</StyledH3>
+      {answer}
     </Container>
   )
 }

@@ -11,7 +11,7 @@ export const StyledH1 = styled.h1<{ color?: string; hoverColor?: string }>`
   line-height: 32px; /* 100% */
   letter-spacing: -0.96px;
   transition-property: color;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 
   &:hover {
     color: ${({ color, hoverColor }) =>
@@ -27,7 +27,7 @@ export const StyledH2 = styled.h2<{ color?: string; hoverColor?: string }>`
   line-height: 24px; /* 100% */
   letter-spacing: -0.72px;
   transition-property: color;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 
   &:hover {
     color: ${({ color, hoverColor }) =>
@@ -43,7 +43,7 @@ export const StyledH3 = styled.h3<{ color?: string; hoverColor?: string }>`
   line-height: 16px; /* 100% */
   letter-spacing: -0.48px;
   transition-property: color;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 
   &:hover {
     color: ${({ color, hoverColor }) =>
@@ -59,7 +59,7 @@ export const StyledP = styled.p<{ color?: string; hoverColor?: string }>`
   line-height: 14px; /* 100% */
   letter-spacing: -0.42px;
   transition-property: color;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 
   &:hover {
     color: ${({ color, hoverColor }) =>
