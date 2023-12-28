@@ -40,6 +40,11 @@ const StyledLink = styled(Link)`
   text-decoration: underline;
 `
 
+const StyledExternalLink = styled.a`
+  color: ${WHITE};
+  text-decoration: underline;
+`
+
 const FAQS: Faq[] = [
   {
     question: 'What is Vertical Scramble?',
@@ -64,8 +69,15 @@ const FAQS: Faq[] = [
     question: 'Where can I buy it?',
     answer: (
       <StyledH3 color={WHITE}>
-        We are going to have a storefront on shopify soon! Stay up to date by
-        following us on Instagram!
+        We are going to have a storefront soon! Stay up to date by following us
+        on{' '}
+        <StyledExternalLink
+          href="https://www.instagram.com/vertical.scramble/"
+          target="_blank"
+        >
+          Instagram
+        </StyledExternalLink>
+        !
       </StyledH3>
     ),
   },
