@@ -1,21 +1,14 @@
-import { useCallback } from 'react'
-
 import styled from '@emotion/styled'
 
-import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import LargeButton from 'src/components/LargeButton/LargeButton'
 import PlayingCard from 'src/components/PlayingCard/PlayingCard'
 import Title from 'src/components/Title/Title'
-import { WHITE } from 'src/design/Colors'
+import { TANGAROA_500, WHITE } from 'src/design/Colors'
 import { StyledH2, StyledH3 } from 'src/design/Typography'
 
 const HomePage = () => {
-  const handleNavigation = useCallback(() => {
-    navigate(routes.newsletterSignUp())
-  }, [])
-
   return (
     <>
       <MetaTags
@@ -35,7 +28,15 @@ const HomePage = () => {
         <Container $gap="18px">
           <StyledH2>The card game for climbers.</StyledH2>
         </Container>
-        <LargeButton onClick={handleNavigation}>Newsletter Sign Up</LargeButton>
+        <LargeButton>
+          <StyledA
+            href="https://verticalscramble.myshopify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Preorder
+          </StyledA>
+        </LargeButton>
       </Container>
     </>
   )
@@ -54,6 +55,11 @@ const Container = styled.div<{ $gap: string }>`
 
 const CenteredH3 = styled(StyledH3)`
   text-align: center;
+`
+
+const StyledA = styled.a`
+  text-decoration: none;
+  color: ${TANGAROA_500};
 `
 
 export default HomePage
