@@ -30,7 +30,7 @@ const HomePage = () => {
         </Container>
         <LargeButton>
           <StyledA
-            href="https://verticalscramble.myshopify.com/"
+            href="https://verticalscramble.myshopify.com/?utm_source=websitecampaign"
             target="_blank"
             rel="noopener noreferrer"
           >
