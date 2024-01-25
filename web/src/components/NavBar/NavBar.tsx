@@ -55,8 +55,6 @@ const Container = styled.div`
   background-color: ${TANGAROA_500};
   gap: 16px;
   justify-content: center;
-  position: absolute;
-  top: 0;
   box-shadow: 0px 1px 3px ${TANGAROA_400};
 `
 const UnstyledLink = styled(Link)`
