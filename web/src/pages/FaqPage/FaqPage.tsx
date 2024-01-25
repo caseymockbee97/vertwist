@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+import { Link } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Faq from 'src/components/Faq/Faq'
@@ -39,6 +40,11 @@ const StyledExternalLink = styled.a`
   text-decoration: underline;
 `
 
+const StyledLink = styled(Link)`
+  color: ${WHITE};
+  text-decoration: underline;
+`
+
 const FAQS: Faq[] = [
   {
     question: 'What is Vertical Scramble?',
@@ -53,9 +59,14 @@ const FAQS: Faq[] = [
     question: 'When can I buy it?',
     answer: (
       <StyledH3 color={WHITE}>
-        We are going to have preorders available soon. We are hoping to ship
-        them out by the end of February but we can&apos;t currently guarantee a
-        date.
+        You can currently preorder the game{' '}
+        <StyledExternalLink
+          href="https://verticalscramble.myshopify.com/?utm_source=websitecampaign"
+          target="_blank"
+        >
+          here
+        </StyledExternalLink>
+        ! If you order before March you can save $5!
       </StyledH3>
     ),
   },
@@ -123,7 +134,8 @@ const FAQS: Faq[] = [
     question: 'How do you play Vertical Scramble?',
     answer: (
       <StyledH3 color={WHITE}>
-        Find out how to play on our gameplay page!
+        Find out how to play on our{' '}
+        <StyledLink to="/gameplay">gameplay page</StyledLink>!
       </StyledH3>
     ),
   },
