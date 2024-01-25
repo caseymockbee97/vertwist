@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Faq from 'src/components/Faq/Faq'
@@ -33,11 +32,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`
-
-const StyledLink = styled(Link)`
-  color: ${WHITE};
-  text-decoration: underline;
 `
 
 const StyledExternalLink = styled.a`
@@ -129,7 +123,7 @@ const FAQS: Faq[] = [
     question: 'How do you play Vertical Scramble?',
     answer: (
       <StyledH3 color={WHITE}>
-        Find out <StyledLink to={routes.gameplay()}>here</StyledLink>!
+        Find out how to play on our gameplay page!
       </StyledH3>
     ),
   },
