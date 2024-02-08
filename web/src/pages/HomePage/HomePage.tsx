@@ -34,7 +34,7 @@ const HomePage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Preorder
+            Order Here!
           </StyledA>
         </LargeButton>
       </Container>
