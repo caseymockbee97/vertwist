@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+import Footer from 'src/components/Footer/Footer'
 import NavBar from 'src/components/NavBar/NavBar'
 import { TANGAROA_500 } from 'src/design/Colors'
 
@@ -12,6 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <Screen>
       <NavBar />
       <App>{children}</App>
+      <Footer />
     </Screen>
   )
 }
@@ -32,7 +34,7 @@ const App = styled.div`
   @media (max-width: 600px) {
     padding: 36px calc((100vw - 300px) / 2);
   }
-  min-height: calc(100vh - 48px);
+  min-height: calc(100vh - 48px - 80px);
   margin-bottom: 72px;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
