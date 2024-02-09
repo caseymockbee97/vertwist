@@ -56,10 +56,10 @@ const FAQS: Faq[] = [
     ),
   },
   {
-    question: 'When can I buy it?',
+    question: 'Where can I buy it?',
     answer: (
       <StyledH3 color={WHITE}>
-        You can currently preorder the game{' '}
+        You can currently order the game{' '}
         <StyledExternalLink
           href="https://verticalscramble.myshopify.com/?utm_source=websitecampaign"
           target="_blank"
@@ -67,22 +67,6 @@ const FAQS: Faq[] = [
           here
         </StyledExternalLink>
         ! If you order before March you can save $5!
-      </StyledH3>
-    ),
-  },
-  {
-    question: 'Where can I buy it?',
-    answer: (
-      <StyledH3 color={WHITE}>
-        We are going to have a storefront soon! Stay up to date by following us
-        on{' '}
-        <StyledExternalLink
-          href="https://www.instagram.com/vertical.scramble/"
-          target="_blank"
-        >
-          Instagram
-        </StyledExternalLink>
-        !
       </StyledH3>
     ),
   },
