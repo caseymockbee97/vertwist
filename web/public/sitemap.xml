@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://www.verticalscramble.com/</loc>
+<loc>https://verticalscramble.com/</loc>
 <priority>1</priority>
 </url>
 <url>
-<loc>http://www.verticalscramble.com/rules</loc>
+<loc>https://verticalscramble.com/gameplay</loc>
 <priority>0.8</priority>
 </url>
 <url>
-<loc>http://www.verticalscramble.com/gameplay</loc>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>http://www.verticalscramble.com/newsletter</loc>
+<loc>https://verticalscramble.com/faq</loc>
 <priority>0.8</priority>
 </url>
 </urlset>

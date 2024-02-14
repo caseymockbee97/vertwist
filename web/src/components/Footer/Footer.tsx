@@ -21,6 +21,9 @@ const Footer = () => {
       <UnstyledLink target="_blank" href="mailto:casey@verticalscramble.com">
         <StyledH3 color={WHITE}>casey@verticalscramble.com</StyledH3>
       </UnstyledLink>
+      <UnstyledLink href="/sitemap.xml">
+        <StyledH3 color={WHITE}>sitemap</StyledH3>
+      </UnstyledLink>
     </Container>
   )
 }
