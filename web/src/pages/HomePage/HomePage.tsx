@@ -37,6 +37,12 @@ const HomePage = () => {
             Order Here!
           </StyledA>
         </LargeButton>
+        <AppStoreBadge href="https://apps.apple.com/us/app/vertical-scramble/id6499559832?itsct=apps_box_badge&amp;itscg=30200">
+          <AppStoreImage
+            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1715040000"
+            alt="Download on the App Store"
+          />
+        </AppStoreBadge>
       </Container>
     </>
   )
@@ -60,6 +66,19 @@ const CenteredH3 = styled(StyledH3)`
 const StyledA = styled.a`
   text-decoration: none;
   color: ${TANGAROA_500};
+`
+
+const AppStoreBadge = styled.a`
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 13px;
+  width: 250px;
+  height: 83px;
+`
+const AppStoreImage = styled.img`
+  border-radius: 13px;
+  width: 250px;
+  height: 83px;
 `
 
 export default HomePage
