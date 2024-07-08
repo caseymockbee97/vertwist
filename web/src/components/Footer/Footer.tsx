@@ -14,9 +14,9 @@ const Footer = () => {
       </UnstyledLink>
       <UnstyledLink
         target="_blank"
-        href="https://verticalscramble.myshopify.com/?utm_source=websitecampaign"
+        href="https://www.etsy.com/shop/VerticalScramble"
       >
-        <StyledH3 color={WHITE}>Shopify</StyledH3>
+        <StyledH3 color={WHITE}>Etsy</StyledH3>
       </UnstyledLink>
       <UnstyledLink target="_blank" href="mailto:casey@verticalscramble.com">
         <StyledH3 color={WHITE}>casey@verticalscramble.com</StyledH3>

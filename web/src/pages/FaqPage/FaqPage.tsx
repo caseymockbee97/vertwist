@@ -61,12 +61,12 @@ const FAQS: Faq[] = [
       <StyledH3 color={WHITE}>
         You can currently order the game{' '}
         <StyledExternalLink
-          href="https://verticalscramble.myshopify.com/?utm_source=websitecampaign"
+          href="https://www.etsy.com/shop/VerticalScramble"
           target="_blank"
         >
           here
         </StyledExternalLink>
-        ! If you order before March you can save $5!
+        !
       </StyledH3>
     ),
   },
@@ -110,7 +110,14 @@ const FAQS: Faq[] = [
     question: 'Is there an app for Vertical Scramble?',
     answer: (
       <StyledH3 color={WHITE}>
-        There might be one in the pipeline 👀 stay tuned for more information.
+        Yes! We have an iOS app! You can purchase it
+        <StyledExternalLink
+          href="https://apps.apple.com/us/app/vertical-scramble/id6499559832"
+          target="_blank"
+        >
+          here
+        </StyledExternalLink>
+        !
       </StyledH3>
     ),
   },
